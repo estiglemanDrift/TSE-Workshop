@@ -7,7 +7,10 @@
     <title>Embedded CLP </title>
     <link rel="stylesheet" href="style.css">
 
+    <script src="./main.js"></script> 
+    
 <script>
+  
  drift.on('ready', function(){
  var request = new XMLHttpRequest();
  request.open('GET', 'https://geolocation-db.com/json/', true);
@@ -35,7 +38,7 @@ var co = data.country_code
 </head>
 <body>
   <script>
-    console.log(co);
+    console.log(variable.co);
   </script>
   
   <iframe
@@ -48,7 +51,7 @@ var co = data.country_code
     
 
 
-  <script src="./main.js"></script> 
+
 
 </body>
 </html>
