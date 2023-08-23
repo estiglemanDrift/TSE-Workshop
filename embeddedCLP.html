@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="./main.js"></script> 
-    
+
 <script>
   
  drift.on('ready', function(){
@@ -21,15 +21,17 @@
  drift.api.setUserAttributes({
   custom_country_code: data.country_code,
   custom_country: data.country_name
+
  });
+ var co = data.country_code
+   console.log(data.country_code);
+   console.log(data.country_name);
 }
 };
 
 request.send();
      });
-var co = data.country_code
-   console.log(data.country_code);
-   console.log(data.country_name);
+
 
 
   </script> 
