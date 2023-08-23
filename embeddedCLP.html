@@ -7,8 +7,19 @@
     <title>Embedded CLP </title>
     <link rel="stylesheet" href="style.css">
 
-   
-    
+    <script>
+    var request = new XMLHttpRequest();
+
+  request.open('GET', 'https://geolocation-db.com/json/', true);
+  request.onload = function() {
+  if (this.status >= 200 && this.status < 400) {
+   // Success!
+   var data = JSON.parse(this.response);
+   console.log(data.country_code);
+   console.log(data.country_name);
+  }}
+
+  </script> 
    
   
 </head>
