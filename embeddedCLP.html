@@ -24,7 +24,7 @@
 
 request.send();
      });
-     
+var co = data.country_code
    console.log(data.country_code);
    console.log(data.country_name);
 
@@ -34,10 +34,12 @@ request.send();
   
 </head>
 <body>
-  
+  <script>
+    console.log(co);
+  </script>
   
   <iframe
-  src="https://TSEworkshop.drift.click/embed/260504/5047481"
+  src="https://TSEworkshop.drift.click/embed/260504/5047481?attr[custom_country_code]=co"
   id="drift-embed-frame"
   height="500px"
   width="500px"
