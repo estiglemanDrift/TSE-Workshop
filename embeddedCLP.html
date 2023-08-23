@@ -9,39 +9,36 @@
 
     <script src="./main.js"></script> 
 
-<script>
-  
- drift.on('ready', function(){
- var request = new XMLHttpRequest();
- request.open('GET', 'https://geolocation-db.com/json/', true);
- request.onload = function() {
-  if (this.status >= 200 && this.status < 400) {
- // Success!
- var data = JSON.parse(this.response);
- drift.api.setUserAttributes({
-  custom_country_code: data.country_code,
-  custom_country: data.country_name
 
- });
- var co = data.country_code
-   console.log(data.country_code);
-   console.log(data.country_name);
-}
-};
-
-request.send();
-     });
-
-
-
-  </script> 
-   
   
 </head>
 <body>
   <script>
-    console.log(variable.co);
-  </script>
+  
+    drift.on('ready', function(){
+    var request = new XMLHttpRequest();
+    request.open('GET', 'https://geolocation-db.com/json/', true);
+    request.onload = function() {
+     if (this.status >= 200 && this.status < 400) {
+    // Success!
+    var data = JSON.parse(this.response);
+    drift.api.setUserAttributes({
+     custom_country_code: data.country_code,
+     custom_country: data.country_name
+   
+    });
+    var co = data.country_code
+      console.log(data.country_code);
+      console.log(data.country_name);
+   }
+   };
+   
+   request.send();
+        });
+   
+   
+   
+     </script> 
   
   <iframe
   src="https://TSEworkshop.drift.click/embed/260504/5047481?attr[custom_country_code]=co"
