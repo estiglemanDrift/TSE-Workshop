@@ -7,17 +7,27 @@
     <title>Embedded CLP </title>
     <link rel="stylesheet" href="style.css">
 
-    <script>
-    var request = new XMLHttpRequest();
-
-  request.open('GET', 'https://geolocation-db.com/json/', true);
-  request.onload = function() {
+<script>
+ drift.on('ready', function(){
+ var request = new XMLHttpRequest();
+ request.open('GET', 'https://geolocation-db.com/json/', true);
+ request.onload = function() {
   if (this.status >= 200 && this.status < 400) {
-   // Success!
-   var data = JSON.parse(this.response);
+ // Success!
+ var data = JSON.parse(this.response);
+ drift.api.setUserAttributes({
+  custom_country_code: data.country_code,
+  custom_country: data.country_name
+ });
+}
+};
+
+request.send();
+     });
+     
    console.log(data.country_code);
    console.log(data.country_name);
-  }}
+
 
   </script> 
    
