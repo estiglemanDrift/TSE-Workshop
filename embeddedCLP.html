@@ -8,13 +8,10 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="./main.js"></script> 
-
-
   
 </head>
 <body>
-  <script>
-  
+  <script>  
     drift.on('ready', function(){
     var request = new XMLHttpRequest();
     request.open('GET', 'https://geolocation-db.com/json/', true);
@@ -35,34 +32,18 @@
  const iframe = document.getElementById('drift-embed-frame');
 
 // Set the src attribute
-iframe.src = `https://TSEworkshop.drift.click/embed/260504/5047481?attr[custom_country_code]=${co}`;
-   
-   
+iframe.src = `https://TSEworkshop.drift.click/embed/260504/5047481?attr[custom_country_code]=${co}`;  
     }
-   };
-   
+   };  
    request.send();
-        });
-   
+        });  
      </script> 
-
 <iframe
 id="drift-embed-frame"
   height="500px"
   width="500px"
   frameborder="0"
 ></iframe>
-
-
-
-
-  
- 
-  
-
-
-
-
 
 </body>
 </html>
