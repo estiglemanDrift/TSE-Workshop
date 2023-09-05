@@ -29,39 +29,6 @@
   </nav>
 
 
-  <script>  
-    drift.on('ready', function(){
-    var request = new XMLHttpRequest();
-    request.open('GET', 'https://geolocation-db.com/json/', true);
-    request.onload = function() {
-     if (this.status >= 200 && this.status < 400) {
-    // Success!
-    var data = JSON.parse(this.response);
-    drift.api.setUserAttributes({
-     custom_country_code: data.country_code,
-     custom_country: data.country_name
-   
-    });
-    var co = data.country_code
-      console.log(data.country_code);
-      console.log(data.country_name);
-   
-       // Get a reference to the iframe element by its ID
- const iframe = document.getElementById('drift-embed-frame');
-
-// Set the src attribute
-iframe.src = `https://TSEworkshop.drift.click/embed/260504/5047481?attr[custom_country_code]=${co}`;  
-    }
-   };  
-   request.send();
-        });  
-     </script> 
-<iframe
-id="drift-embed-frame"
-  height="500px"
-  width="500px"
-  frameborder="0"
-></iframe>
-
+  
 </body>
 </html>
