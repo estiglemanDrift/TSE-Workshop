@@ -202,7 +202,7 @@ nav a:hover {
 }
 
 /* Other styles */
-body {
+.word {
   background-color: skyblue;
   color: #fff;
   display: flex;
@@ -214,12 +214,6 @@ body {
   margin: 0;
 }
 
-.fixed {
-  position: fixed;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 footer {
   position: fixed;
