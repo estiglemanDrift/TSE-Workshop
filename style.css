@@ -215,21 +215,5 @@ nav a:hover {
 }
 
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  letter-spacing: 1px;
-}
 
-footer i {
-  color: red;
-}
-
-footer a {
-  color: #3C97BF;
-  text-decoration: none;
-}
 
