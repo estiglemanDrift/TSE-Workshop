@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastlane Workshop  </title>
+    <link rel="stylesheet" href="style.css">
+
+   
+    
+   
+  
+</head>
+<body>
+  <nav>
+    <div class="bar">
+        <a href="index.html" class="logo"><img src="./images/Drift Icon.png" alt="logo"></a>
+
+        <!--Linking Pages-->
+            
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="fastlane.html">Fastlane</a></li>
+            <li><a href="widget.html">Widget</a></li>
+            <li><a href="embeddedCLP.html">Embedded CLP</a></li>
+            <li><a href="driftIdentify.html">Drift Identify</a></li>
+            <li><a href="gtm.html">GTM</a></li>
+        </ul>
+    </div>                                                                                                                                      `
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1>Deferred Form</h1>
+  <br>
+  <br>
+
+  <h2>HTML Forms</h2>
+
+<form action="/action_page.php" id="form5555">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+  
+  <script src="./main.js"></script> 
+
+
+  <!---FL Script-->
+  <script type="text/javascript">
+    drift.api.connectForm({
+      formSelector: 'form5555', 
+      stageData: true
+    });
+  </script>
+
+
+</body>
+</html>
