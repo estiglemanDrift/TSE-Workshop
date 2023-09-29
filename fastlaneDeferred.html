@@ -49,6 +49,12 @@
   <input type="text" id="lname" name="lname"><br><br>
   <input type="submit" value="Submit">
 </form> 
+
+submit needs to listen to a submmit event
+
+document.getElementById('your-form').addEventListener('submit', function (event) {
+
+});
 -->
 
 
@@ -63,10 +69,12 @@
   
  
 <script type="text/javascript">
-  drift.api.connectForm({
+  windnow.drift.on('ready', function(api) {
+   api.connectForm({
     formSelector: '#mktoForm_1113', 
     stageData: true
-  });
+  })
+})
 </script>
   
 
