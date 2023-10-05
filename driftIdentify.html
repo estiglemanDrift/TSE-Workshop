@@ -32,15 +32,26 @@
       }
     }();
     drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('m9grgi63d3nh');
 
     let userJWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiZXhwIjoxNzIxMjQyMzcxfQ.nox7Jyn1r46PvqtpdSEoimlXHAXLt9_4g6i6iGGW3Ls';
 
-    drift.identify("xzp", {
-      email: 'Erikaid@test.com',
-      firstName: "Erika",
-      lastName: "ID"
-    }, { userJwt: userJWT });
+drift.identify("xzp", {
+  email: 'Erikaid@test.com',
+  firstName: "Erika",
+  lastName: "ID",
+  has_consent: true
+}, { userJwt: userJWT });
+
+
+    drift.load('m9grgi63d3nh');
+
+    //let userJWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiZXhwIjoxNzIxMjQyMzcxfQ.nox7Jyn1r46PvqtpdSEoimlXHAXLt9_4g6i6iGGW3Ls';
+
+    //drift.identify("xzp", {
+      //email: 'Erikaid@test.com',
+      //firstName: "Erika",
+      //lastName: "ID"
+    //}, { userJwt: userJWT });
 
   </script>
 
