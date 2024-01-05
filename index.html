@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 
     
-
+    <script src="./main.js"></script> 
   
 </head>
 <body>
@@ -30,8 +30,17 @@
   </nav>
 
   <!--===================END OF NAV BAR ==================================-->
+<div>
+<script>
+  drift.on('ready', function(api) {
+  drift.api.setUserAttributes({
+    bio: new URLSearchParams(window.location.search).get('smart')
+  });
+});
+</script>
 
-  <script src="./main.js"></script> 
+</div>
+
 
   <!--=================GA4========================-->
   <!-- Google tag (gtag.js) -->
