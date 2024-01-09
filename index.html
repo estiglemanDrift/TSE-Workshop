@@ -40,10 +40,12 @@
 </script>
 
 <script>
-window.drift.api.startInteraction({
+drift.on ('ready',function(api){
+  drift.api.startInteraction({
   interactionId: 354881, 
 goToConversation: true 
 
+});
 });
 console.log("PB");
 </script>
