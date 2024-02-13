@@ -40,4 +40,33 @@
   </script>
 -->
 </body>
+
+<footer>
+
+  <script>
+    var formData = {
+    email: document.getElementById('field8').value,
+    firstName: document.getElementById('field6').value,
+    lastname: document.getElementById('field7').value,
+    company: document.getElementById('field9').value,
+    businessPhone: document.getElementById('field13').value,
+    jobLevel: document.getElementById('field10').value,
+    jobRole: document.getElementById('field11').value,
+    jobFunction: document.getElementById('field12').value,
+    country: document.getElementById('field14').value,
+    state: document.getElementById('field15').value,
+    iAmInterestedIn: document.getElementById('field30').value,
+    comments: document.getElementById('field918').value,
+     }
+
+    drift.api.collectFormData(formData, {
+            campaignId: 2799899,
+            followupUrl: '/thank-you' 
+          });
+
+  </script>
+
+
+
+</footer>
 </html>
