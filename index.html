@@ -65,5 +65,20 @@ console.log("PB");
   gtag('config', 'G-K12FS66G5Q');
 </script>
 
+
+<!--Data Layers-->
+<script>
+  window.drift.on('ready', function(api){
+    window.drift.on("conversation:buttonClicked", function(data) {
+  if (data.buttonBody === "Visit"){
+    window.location.href = "https://tsedrift.netlify.app/thankyou";
+   }
+});
+
+  })
+
+</script>
+
+
 </body>
 </html>
