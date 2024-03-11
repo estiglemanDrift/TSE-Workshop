@@ -61,12 +61,21 @@
        
        LoadDriftWidget.init();
       </script>
+
+      <script>
+        drift.on('ready', function (api){
+          drift.api.startInteraction({
+            interactionId: 361196,
+            goToConversation: true
+          });
+        })
+      </script>
        
-  drift.config({
+  <!--drift.config({
     "attributes": {
       "email": "swebel@drift.com"
   });
-       
+       --->
   
 
 </body>
