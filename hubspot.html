@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastlane Workshop  </title>
+    <link rel="stylesheet" href="style.css">
+
+   
+    
+   
+  
+</head>
+<body>
+
+  <script src="./main.js"></script> 
+
+  <!--SERVICE NOW INSTALL-->
+ 
+  
+  <nav>
+    <div class="bar">
+        <a href="index.html" class="logo"><img src="./images/Drift Icon.png" alt="logo"></a>
+
+        <!--Linking Pages-->
+            
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="fastlane.html">Fastlane</a></li>
+            <li><a href="widget.html">Widget</a></li>
+            <li><a href="embeddedCLP.html">Embedded CLP</a></li>
+            <li><a href="driftIdentify.html">Drift Identify</a></li>
+            <li><a href="gtm.html">GTM</a></li>
+        </ul>
+    </div>                                                                                                                                      `
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1>Hubspot Form</h1>
+  <br>
+  <br>
+
+
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      region: "na1",
+      portalId: "8895416",
+      formId: "13dc66a0-8652-453a-8d28-45fa8a07513e"
+    });
+  </script>
+  
+  <script type="text/javascript">
+    var _formData;
+    window.addEventListener('message', function (event) {
+      if (!event.data || event.data.type !== 'hsFormCallback') {
+        return;
+      }
+      var formEvent = event.data;
+      if (formEvent.eventName === 'onFormSubmit' && !!formEvent.data && formEvent.data.length > 0) {
+        _formData = {};
+        for (var i = 0, len = formEvent.data.length; i < len; i++) {
+          var item = formEvent.data[i];
+          if (!!item.name && !!item.value && item.value !== '') {
+            _formData[item.name] = item.value;
+          }
+        }
+      } else if (formEvent.eventName === 'onFormSubmitted' && !!_formData && Object.keys(_formData).length > 0) {
+        drift.api.collectFormData(_formData, {
+          campaignId: 2605133, // UPDATE ME with the campaign ID provided by the fastlane playbook
+          followupUrl: "https://tsedrift.netlify.app/thankyou",
+        });
+      }
+    });
+  </script>
+
+
+
+ 
+
+</body>
+</html>
