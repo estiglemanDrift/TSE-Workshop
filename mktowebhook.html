@@ -41,9 +41,10 @@
 <script>
   window.drift.on("conversation:firstInteraction", function(data) {
     drift.api.setUserAttributes({
-      recent_conversationId: data.conversationId
+      recent_conversationId_mkto: data.conversationId
     })
  });
+
  </script>
   
 </head>
