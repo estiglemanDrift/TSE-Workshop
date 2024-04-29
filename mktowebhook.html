@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSE Workshop  </title>
+    <link rel="stylesheet" href="style.css">
+
+    
+  <!-- Start of Async Drift Code -->
+  <script>
+    "use strict";
+
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';  
+    drift.load('m9grgi63d3nh');
+
+</script>
+
+<!--Capture convo ID to save as attribute-->
+<script>
+  window.drift.on("conversation:firstInteraction", function(data) {
+    drift.api.setUserAttributes({
+      recent_conversationId: data.conversationId
+    })
+ });
+ </script>
+  
+</head>
+<body>
+  <nav>
+    <div class="bar">
+        <a href="index.html" class="logo"><img src="./images/Drift Icon.png" alt="logo"></a>
+
+        <!--Linking Pages-->
+            
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="fastlane.html">Fastlane</a></li>
+            <li><a href="widget.html">Widget</a></li>
+            <li><a href="embeddedCLP.html">Embedded CLP</a></li>
+            <li><a href="driftIdentify.html">Drift Identify</a></li>
+            <li><a href="gtm.html">GTM</a></li>
+        </ul>
+    </div>                                                                                                                                      `
+  </nav>
+
+  <!--===================END OF NAV BAR ==================================-->
+
+
+</body>
+</html>
