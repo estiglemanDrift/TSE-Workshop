@@ -59,7 +59,13 @@
   });
 </script>
 
-
+<script>
+  window.drift.on('ready', function(api){
+    window.drift.on("conversation:buttonClicked", function(data) {
+  console.log('user clicked btn' + data.buttonBody);
+   })
+});
+</script>
 
 
 
