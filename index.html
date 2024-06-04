@@ -78,6 +78,12 @@ console.log("PB");
   })
 
 </script>
+<script>
+window.drift.on("conversation:playbookFired", function(data) {
+  console.log("Playbook fired: " + JSON.stringify(data))
+})
+</script>
+
 
 
 </body>
