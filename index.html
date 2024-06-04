@@ -70,14 +70,15 @@ console.log("PB");
 <script>
   window.drift.on('ready', function(api){
     window.drift.on("conversation:buttonClicked", function(data) {
-  if (data.buttonBody === "Visit"){
-    window.location.href = "https://tsedrift.netlify.app/thankyou";
+      console.log("conversation:buttonClicked" = JSON.stringify(data))
+      //if (data.buttonBody === "Visit"){
+    //window.location.href = "https://tsedrift.netlify.app/thankyou";
    }
-});
-
-  })
-
+  )
+  });
 </script>
+
+
 <script>
 window.drift.on("conversation:playbookFired", function(data) {
   console.log("Playbook fired: " + JSON.stringify(data))
