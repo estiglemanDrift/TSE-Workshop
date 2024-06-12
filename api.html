@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSE Workshop  </title>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <script src="./main.js"></script> 
+  
+</head>
+<body>
+  <nav>
+    <div class="bar">
+        <a href="index.html" class="logo"><img src="./images/Drift Icon.png" alt="logo"></a>
+
+        <!--Linking Pages-->
+            
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="fastlane.html">Fastlane</a></li>
+            <li><a href="widget.html">Widget</a></li>
+            <li><a href="embeddedCLP.html">Embedded CLP</a></li>
+            <li><a href="driftIdentify.html">Drift Identify</a></li>
+            <li><a href="gtm.html">GTM</a></li>
+        </ul>
+    </div>                                                                                                                                      `
+  </nav>
+
+  <!--===================END OF NAV BAR ==================================-->
+<div>
+<script>
+  drift.on('ready', function(api) {
+  drift.api.setUserAttributes({
+    bio: new URLSearchParams(window.location.search).get('smart')
+  });
+});
+</script>
+<!--
+<script>
+drift.on ('ready',function(api){
+  drift.api.startInteraction({
+  interactionId: 354881, 
+goToConversation: true 
+
+});
+});
+console.log("PB");
+</script>
+-->
+<!-- DEV API OVERWRITE-->
+
+<script>
+  drift.on ('ready',function(api){
+    drift.api.widget.show();
+  });
+  console.log("PB");
+  </script>
+
+
+
+</div>
+
+
+
+</body>
+</html>
