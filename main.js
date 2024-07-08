@@ -25,7 +25,12 @@
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('m9grgi63d3nh');
 
+function toggleChatWithDelay() {
+  setTimeout(function() {
+    drift.api.toggleChat();
+  }, 20000); // 20 seconds delay in milliseconds
+
+}
 
 
-LoadDriftWidget.init();
 
