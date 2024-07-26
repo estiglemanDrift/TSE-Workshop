@@ -23,7 +23,7 @@
   }
 }();
 drift.SNIPPET_VERSION = '0.3.1';
-drift.load('m9grgi63d3nh');
+drift.load('7xzz4mtpike9');
 
 function toggleChatWithDelay() {
   setTimeout(function() {
