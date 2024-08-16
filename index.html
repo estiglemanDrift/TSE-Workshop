@@ -31,7 +31,16 @@
 
   <!--===================END OF NAV BAR ==================================-->
 <div>
-
+  <script>
+    drift.on('ready', function(api) {
+    drift.api.setUserAttributes({
+      bio: "google_tag_manager",
+      ga_cookies: google_tag_manager["rm"]["215620"](1088),
+      tdcs: google_tag_manager["rm"]["215620"](1089),
+      isfv: google_tag_manager["rm"]["215620"](1090),
+    });
+  });
+  </script>x
 
 
   
@@ -59,14 +68,14 @@ console.log("PB");
 
 
   <!--=================GA4========================-->
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K12FS66G5Q"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHBW326KS0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-K12FS66G5Q');
+  gtag('config', 'G-CHBW326KS0');
 </script>
 
 
@@ -93,7 +102,6 @@ window.drift.on("conversation:playbookFired", function(data) {
 <br>
 <br>
 <br>
-
 
 
 

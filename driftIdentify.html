@@ -35,12 +35,13 @@
 
     let userJWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNzEwMzUyNTU2fQ.HuzZ1poYnXIJEv6WPNQLh_ABN6hz-hafO06wk4ysLkQ';
 
-drift.identify("1234567890", {
+drift.identify("12345678901", {
   email: 'Erikaid@test.com',
   firstName: "Erika",
   lastName: "ID",
   
-}, { userJwt: userJWT });
+})
+//, { userJwt: userJWT });
 
 
     drift.load('m9grgi63d3nh');
