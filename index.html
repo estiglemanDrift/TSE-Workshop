@@ -97,6 +97,18 @@ window.drift.on("conversation:playbookFired", function(data) {
   console.log("Playbook fired: " + JSON.stringify(data))
 })
 </script>
+
+<script>
+  window.drift.on("startConversation", function(data) {
+    console.log("CHAT STARTED" + data.conversationId + JSON.stringify(data))
+  })
+  </script>
+
+<script>
+  window.drift.on("conversation:firstIntraction", function(data) {
+    console.log("FIRST INTERACTION " + data.conversationId + JSON.stringify(data))
+  })
+  </script>
 <br>
 <br>
 <br>
