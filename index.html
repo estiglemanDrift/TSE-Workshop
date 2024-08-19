@@ -100,13 +100,13 @@ window.drift.on("conversation:playbookFired", function(data) {
 
 <script>
   window.drift.on("startConversation", function(data) {
-    console.log("CHAT STARTED" + data.conversationId + JSON.stringify(data))
+    console.log("CHAT STARTED" + JSON.stringify(data))
   })
   </script>
 
 <script>
   window.drift.on("conversation:firstInteraction", function(data) {
-    console.log("FIRST INTERACTION " + data.conversationId + JSON.stringify(data))
+    console.log("FIRST INTERACTION " + JSON.stringify(data))
   })
   </script>
 <br>
