@@ -23,14 +23,31 @@
   }
 }();
 drift.SNIPPET_VERSION = '0.3.1';
+
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('.drift-widget-message-preview-text drift-widget-message-preview-text--align-right');
+  elements.forEach(function(element) {
+      element.classList.remove('drift-widget-message-preview-text drift-widget-message-preview-text--align-right');
+  });
+});
+
 drift.load('m9grgi63d3nh');
 
-function toggleChatWithDelay() {
-  setTimeout(function() {
-    drift.api.toggleChat();
-  }, 20000); // 20 seconds delay in milliseconds
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('.drift-widget-message-preview-text drift-widget-message-preview-text--align-right');
+  elements.forEach(function(element) {
+      element.classList.remove('drift-widget-message-preview-text drift-widget-message-preview-text--align-right');
+  });
+});
 
-}
+
+///function toggleChatWithDelay() {
+ /// setTimeout(function() {
+ ///   drift.api.toggleChat();
+ /// }, 20000); // 20 seconds delay in milliseconds
+
+
+///}
 
 
 
