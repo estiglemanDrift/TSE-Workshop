@@ -1,4 +1,5 @@
 
+function Load(){
 
 !function LoadDriftWidget() {
   var t = window.driftt = window.drift = window.driftt || [];
@@ -22,10 +23,10 @@
 }();
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('m9grgi63d3nh');
-
-drift.on ('ready',function(api){
-  drift.api.widget.hide() 
-})
+}
+//drift.on ('ready',function(api){
+ /// drift.api.widget.hide() 
+//})
 
 ///drift.on ('ready',function(api){
 ///  drift.api.startInteraction({
