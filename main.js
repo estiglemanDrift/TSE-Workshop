@@ -25,13 +25,12 @@
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('m9grgi63d3nh');
 
+drift.on('ready', function(api) {
+  drift.hidePreview();
+   console.log("previewHide")})
+
+
 ///function toggleChatWithDelay() {
  /// setTimeout(function() {
  ///   drift.api.toggleChat();
- /// }, 20000); // 20 seconds delay in milliseconds
-
-
-///}
-
-
-
+ /// }, 20000); // 20 seconds delay in milliseconds}
