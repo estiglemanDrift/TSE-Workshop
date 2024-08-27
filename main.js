@@ -2,7 +2,7 @@
 
 "use strict";
 
-!function LoadDriftWidget() {
+!function LoadDriftWidget1() {
   var t = window.driftt = window.drift = window.driftt || [];
   if (!t.init) {
     if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));

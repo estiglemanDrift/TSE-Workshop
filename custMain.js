@@ -1,6 +1,6 @@
 
 
-!function() {
+!function LoadDriftWidget() {
   var t = window.driftt = window.drift = window.driftt || [];
   if (!t.init) {
     if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
@@ -23,16 +23,18 @@
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('m9grgi63d3nh');
 
-
-
 drift.on ('ready',function(api){
-  drift.api.startInteraction({
-  interactionId: 354881, 
-goToConversation: true 
-
+  drift.api.widget.hide() 
 })
-});
-console.log("PB");
+
+///drift.on ('ready',function(api){
+///  drift.api.startInteraction({
+///  interactionId: 354881, 
+///goToConversation: true 
+
+///})
+///});
+///console.log("PB");
 
 
 

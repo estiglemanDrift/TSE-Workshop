@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   
     
-   
+    <script src="/custMain.js"></script> 
+  
   
 </head>
 
@@ -20,16 +21,44 @@
 <br>
 <br>
     <div class="chatbot-body">
-        <button onclick="LoadDriftWidget()">I’d like to schedule a demo</button>
-        <button>I want to learn more about pricing</button>
-        <button>I’m looking for info about Calabrio</button>
+        <button name="button" id="fire_PB1" type="button">I’m looking for info about Calabrio</button>
+        <button name="button" id="fire_PB2" type="button">I want to learn more about pricing</button>
+        <button name="button" id="fire_PB3" type="button">I would like to book a meeting</button>
       
     </div>
 
 
+    <script>var button = document.getElementById('fire_PB1');
+        button.addEventListener('click', function() {
+          drift.api.startInteraction({ 
+            interactionId: 354881,
+            goToConversation: true, //(boolean, default: true) Determines if the playbook should auto-expand the chat when fired. Set this to false if you want the playbook to show a preview message instead of popping it open.
+            replaceActiveConversation: true 
+           });
+        });
+    </script>
 
 
+    <script>var button = document.getElementById('fire_PB2');
+        button.addEventListener('click', function() {
+          drift.api.startInteraction({ 
+            interactionId: 340721,
+            goToConversation: true, //(boolean, default: true) Determines if the playbook should auto-expand the chat when fired. Set this to false if you want the playbook to show a preview message instead of popping it open.
+            replaceActiveConversation: true 
+           });
+        });
+</script>
 
+
+<script>var button = document.getElementById('fire_PB3');
+    button.addEventListener('click', function() {
+      drift.api.startInteraction({ 
+        interactionId: 361196,
+        goToConversation: true, //(boolean, default: true) Determines if the playbook should auto-expand the chat when fired. Set this to false if you want the playbook to show a preview message instead of popping it open.
+        replaceActiveConversation: true 
+       });
+    });
+</script>
 
 
 
