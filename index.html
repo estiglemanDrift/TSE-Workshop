@@ -9,7 +9,13 @@
 
     
     <script src="./main.js"></script> 
-   
+    <script>
+    drift.on('ready', function (api) {
+      console.log('hi',api)
+      api.hidePreview()
+      console.log("previewHide")
+    })
+   </script>
   
 </head>
 <body>

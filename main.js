@@ -25,6 +25,14 @@
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('m9grgi63d3nh');
 
+//drift.on('ready', function(api){drift.api.widget.show(); })	
+
+//drift.on('ready', function (api) {
+//  setTimeout(() => {
+//    api.hidePreview()
+//  }, 1000)
+//})
+
 
 
 
