@@ -29,11 +29,11 @@ drift.load('k39mxhti7nmm');
 
 //drift.on('ready', function(api){drift.api.widget.show(); })	
 
-drift.on('ready', function (api) {
+/* drift.on('ready', function (api) {
  setTimeout(() => {
    api.hidePreview()
  }, 100)
-}) 
+})  */
 
 /* 
 drift.on('ready', function (api) {
