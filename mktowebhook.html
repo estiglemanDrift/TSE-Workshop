@@ -40,6 +40,7 @@
 <!--Capture convo ID to save as attribute-->
 <script>
   window.drift.on("conversation:firstInteraction", function(data) {
+    console.log('attribute'+  JSON.stringify(data))
     drift.api.setUserAttributes({
       recent_conversationId_mkto: data.conversationId
     })

@@ -44,6 +44,10 @@
 });
 </script>
 
+
+
+  <!--=================== startInteraction ==================================-->
+
 <!--------
 <script>
 drift.on ('ready',function(api){
@@ -71,6 +75,7 @@ console.log("PB");
   gtag('config', 'G-CHBW326KS0');
 </script>
 
+  <!--=================== Data Layers ==================================-->
 
 <!--Data Layers
 <script>
@@ -84,6 +89,7 @@ console.log("PB");
   });
 </script>
 
+  <!-===================Payload Return for Drift Events ==================================--->
 
 <script>
 window.drift.on("conversation:playbookFired", function(data) {
@@ -102,8 +108,49 @@ window.drift.on("conversation:playbookFired", function(data) {
     console.log("FIRST INTERACTION " + JSON.stringify(data))
   })
   </script>
-  -->
+
+  <script>
+window.drift.on("conversation:buttonClicked", function(data) {
+  console.log("user clicked a button with text: " + data.buttonBody);
+    console.log("playbookId " + data.playbookId);
+});
+  </script>
+
   
+
+
+  <!--=================== Dynamically Tracking Changein Online Status ==================================-->
+<script>
+  // Initialize Drift
+  window.drift.on('ready', function(api, event) {
+    console.log('status' + JSON.stringify(event))
+      // Initial check for online/offline status
+      //checkOnlineStatus(event.data.isOnline);
+      ///console.log('status' + JSON.stringify(event))
+  })
+
+
+  window.drift.on("emailCapture", function(data) {
+  console.log("user identified as: " + JSON.stringify(data));
+  window.drift.on('ready', function(api, event) {
+    console.log('status' + JSON.stringify(event))
+      // Initial check for online/offline status
+      //checkOnlineStatus(event.data.isOnline);
+      ///console.log('status' + JSON.stringify(event))
+  })
+
+});
+
+
+  window.drift.on('statusChange', function(data) {
+    comsole.log('changed');
+        //checkOnlineStatus(data.isOnline);
+    });
+
+</script>
+
+
+
 <br>
 <br>
 <br>
