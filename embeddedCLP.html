@@ -68,5 +68,12 @@ iframe.src = `https://TSEworkshop.drift.click/embed/260504/5047481?attr[custom_c
   width="500px"
   frameborder="0"
 ></iframe>
+
+<script>
+  window.drift.on("conversation:buttonClicked", function(data) {
+    console.log("user clicked a button with text: " + data.buttonBody);
+      console.log("playbookId " + data.playbookId);
+  });
+    </script>
 </body>
 </html>
