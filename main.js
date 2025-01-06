@@ -26,14 +26,30 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('m9grgi63d3nh');
 
 
+drift.on('ready', function(){
+	let request = new XMLHttpRequest();
+	request.open('GET', 'https://geolocation-db.com/json/', true);
+	request.onload = function() {
+    if (this.status >= 200 && this.status < 400) {
+      // Success!
+      let data = JSON.parse(this.response);
+      drift.api.setUserAttributes({
+        custom_country_code: data.country_code,
+        custom_country: data.country_name
+      });
+    }
+	};
+	request.send();
+});
+
 
 //drift.on('ready', function(api){drift.api.widget.show(); })	
 
-/* drift.on('ready', function (api) {
+ drift.on('ready', function (api) {
  setTimeout(() => {
    api.hidePreview()
  }, 100)
-})   */
+}) 
 
 /* 
 drift.on('ready', function (api) {
