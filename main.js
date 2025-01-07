@@ -25,7 +25,7 @@
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('m9grgi63d3nh');
 
-
+/*
 drift.on('ready', function(){
 	let request = new XMLHttpRequest();
 	request.open('GET', 'https://geolocation-db.com/json/', true);
@@ -41,15 +41,20 @@ drift.on('ready', function(){
 	};
 	request.send();
 });
-
+*/
 
 //drift.on('ready', function(api){drift.api.widget.show(); })	
 
+//hide PB hook
+/*
  drift.on('ready', function (api) {
  setTimeout(() => {
    api.hidePreview()
  }, 100)
 }) 
+*/
+
+
 
 /* 
 drift.on('ready', function (api) {
