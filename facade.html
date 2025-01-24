@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSE Workshop  </title>
+    <link rel="stylesheet" href="style.css">
+
+    
+   <!-- <script src="./main.js"></script> -->
+   
+   
+</head>
+<body>
+
+<div>
+ 
+
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Event Listeners</title>
+</head>
+<body>
+  <div id="buttonContainer"></div>
+
+  <script>
+    // Function to create a button
+    function createButton(id, text, onClickHandler) {
+      const button = document.createElement("button");
+      button.id = id;
+      button.textContent = text;
+      button.addEventListener("click", onClickHandler);
+      return button;
+    }
+
+    // Define click event handlers
+    const handleFirstButtonClick = () => alert("First button clicked!");
+    const handleSecondButtonClick = () => alert("Second button clicked!");
+
+    // Create buttons
+    const firstButton = createButton("firstButton", "YES!", handleFirstButtonClick);
+    const secondButton = createButton("secondButton", "NO!", handleSecondButtonClick);
+
+    // Append buttons to the container
+    const container = document.getElementById("buttonContainer");
+    container.appendChild(firstButton);
+    container.appendChild(secondButton);
+  </script>
+
+  
+</body>
+</html>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+</body>
+</html>
