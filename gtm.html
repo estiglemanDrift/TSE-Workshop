@@ -64,6 +64,16 @@
   });
 </script>
 
+
+<script>
+if (window.drift) {
+var hiddenField = document.querySelector('input[name="drift_test"]')
+hiddenField.value = "Drift Loaded";
+} else {
+var hiddenField = document.querySelector('input[name="drift_test"]')
+hiddenField.value = "Drift NOT Loaded";}
+
+</script>
 <br>
 <!--
   <script src="//844-RKG-112.mktoweb.com/js/forms2/js/forms2.min.js"></script> 
