@@ -13,6 +13,28 @@
   
 </head>
 <body>
+
+
+<button class="accept" id="click">LOAD</button>
+
+<script>
+  document.querySelector(".accept").addEventListener("click", function() {
+    loadDriftWidget()
+  });
+  </script>
+
+
+<!--
+<script>
+document.getElementById("click").addEventListener("click", function() {
+  loadDriftWidget()
+});
+</script>
+-->
+
+
+
+
   <!-- LOAD / SCROLL / Open-->
   <script>
     function loadDriftWidget(){
@@ -35,16 +57,25 @@
         };
       }
     drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('m9grgi63d3nh');
-    drift.on('conversation:playbookFired', function(){
-      drift.api.openChat();
-    });
+    drift.load('534hcz9d3ngy');
     }
-    
-    function loadDriftWidgetOnScroll() { 
-         loadDriftWidget();
-         ; window.removeEventListener('scroll', loadDriftWidgetOnScroll)
-    ; } window.addEventListener('scroll', loadDriftWidgetOnScroll); 
+
+   // function loadDriftWidgetOnClick() { 
+   //      loadDriftWidget();
+   //     ; window.removeEventListener('click', loadDriftWidgetOnClick)
+  //  ; } window.addEventListener('click', loadDriftWidgetOnClick); 
+
+
+    <!--OPEN PB IN CHATBOT-->
+   // drift.on('conversation:playbookFired', function(){
+     // drift.api.openChat();
+    //});
+    //}
+  //              LOAD DRIFT ON SCROLL-->
+    //function loadDriftWidgetOnScroll() { 
+      //   loadDriftWidget();
+        // ; window.removeEventListener('scroll', loadDriftWidgetOnScroll)
+    //; } window.addEventListener('scroll', loadDriftWidgetOnScroll); 
     </script>
  
 <br>

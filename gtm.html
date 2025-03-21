@@ -34,6 +34,15 @@
   gtag('config', 'G-CHBW326KS0');
 </script>
 
+
+<script>
+window.drift.on("message", function(data) {
+  console.log("User received a message from ' + data.teamMember.name + ' in conversation " + data.conversationId);
+});
+
+
+</script>
+
   <nav>
     <div class="bar">
         <a href="index.html" class="logo"><img src="./images/Drift Icon.png" alt="logo"></a>
