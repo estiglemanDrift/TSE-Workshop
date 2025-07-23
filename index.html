@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSE Workshop  </title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      body { font-family: Arial, sans-serif; padding: 20px; }
+      #searchInput { padding: 8px; width: 300px; margin-right: 10px; }
+      #searchButton { padding: 8px 12px; }
+      .highlight { background-color: yellow; }
+  </style>
 
     <script src="main.js"></script>
     
@@ -34,8 +40,74 @@
   <!--===================END OF NAV BAR ==================================-->
 <div>
 
- 
- 
+   <!--===================SEARCH BAR ==================================-->
+   <div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>   
+      <br>
+       <p>This is a paragraph of text with various words. Try searching for banana, cherry, or grape.</p>
+       <p>Another paragraph with more text and some repeating words like banana and apple.</p>
+       <p>Final paragraph mentioning fruits such as cherry and elderberry.</p>
+   
+       <input type="text" id="searchInput" placeholder="Search text on page..."/>
+       <button id="searchButton">Search</button>
+   
+       <script>
+           const searchInput = document.getElementById('searchInput');
+           const searchButton = document.getElementById('searchButton');
+   
+           function clearHighlights() {
+               document.querySelectorAll('.highlight').forEach(el => {
+                   const parent = el.parentNode;
+                   parent.replaceChild(document.createTextNode(el.textContent), el);
+                   parent.normalize();
+               });
+           }
+   
+           function highlightText(text) {
+               if (!text) return;
+   
+               const body = document.body;
+               const regex = new RegExp(`(${text})`, 'gi');
+   
+               const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, {
+                   acceptNode: function(node) {
+                       if (node.parentNode && node.parentNode.tagName !== 'SCRIPT' && node.parentNode.tagName !== 'STYLE') {
+                           return NodeFilter.FILTER_ACCEPT;
+                       }
+                       return NodeFilter.FILTER_REJECT;
+                   }
+               });
+   
+               while (walker.nextNode()) {
+                   const currentNode = walker.currentNode;
+                   if (regex.test(currentNode.textContent)) {
+                       const span = document.createElement('span');
+                       span.className = 'highlight';
+                       span.textContent = currentNode.textContent.match(regex)[0];
+   
+                       const newNode = currentNode.splitText(currentNode.textContent.search(regex));
+                       newNode.nodeValue = newNode.nodeValue.substring(span.textContent.length);
+                       currentNode.parentNode.insertBefore(span, newNode);
+                   }
+               }
+           }
+   
+           searchButton.addEventListener('click', function() {
+               clearHighlights();
+               const searchText = searchInput.value.trim();
+               if (searchText) {
+                   highlightText(searchText);
+               }
+           });
+       </script>
+   
+  </div>
+   
 
 <script>
   drift.on('ready', function(api) {
@@ -45,7 +117,7 @@
 });
 </script>
 
-
+</div>
 
   <!--=================== startInteraction ==================================-->
 
