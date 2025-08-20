@@ -1,0 +1,54 @@
+class NavigationBar extends HTMLElement { constructor() { super();
+this.attachShadow({ mode: 'open' }); // Create a shadow DOM for encapsulation
+this.shadowRoot.innerHTML = this.render(); } render() { return `
+<style>
+  /* Add component-specific styles here */
+  nav {
+    width: 100vw;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 2;
+  }
+  nav .bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo img {
+    width: 100%;
+  }
+  nav .bar ul {
+    display: flex;
+    padding: 0 6rem;
+    gap: 9rem;
+  }
+  nav .bar ul a {
+    padding: 0 0 0 0.3rem;
+  }
+
+  nav .bar ul a.active {
+    border-bottom: 3px solid var(--color-variant);
+  }
+
+  nav a:hover {
+    color: var(--color-variant);
+  }
+</style>
+<nav>
+  <div class="bar">
+    <a href="index.html" class="logo"
+      ><img src="./images/Drift Icon.png" alt="logo"
+    /></a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="fastlane.html">Fastlane</a></li>
+      <li><a href="widget.html">Widget</a></li>
+      <li><a href="embeddedCLP.html">Embedded CLP</a></li>
+      <li><a href="driftIdentify.html">Drift Identify</a></li>
+      <li><a href="gtm.html">GTM</a></li>
+    </ul>
+  </div>
+</nav>
+`; } } customElements.define('navigation-bar', NavigationBar);
